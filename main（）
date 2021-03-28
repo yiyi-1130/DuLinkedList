@@ -1,0 +1,39 @@
+#include "DuLinkedList.h"
+
+int main()
+{
+    DuLinkedList head = NULL;
+    InitList_DuL(&head);
+    menu();
+    while (1)
+    {
+        char ch = getchar();
+        switch (ch)
+        {
+        case '1':
+            CreatedDuLinkList(&head); break;
+
+        case '2':
+            Insert1(head);//这里也可以调用函数Insert2，相同功能，但一个前插，一个是后插
+                break;
+
+        case '3':
+            Delete(head);
+                break;
+
+        case '4':
+            DestroyList_DuL(&head);
+                break;
+
+            case '0':
+
+                printf("谢谢使用!再见!\n");
+
+                return;
+
+        default:
+
+            printf("请重新输入\n");
+        }
+    }
+}
